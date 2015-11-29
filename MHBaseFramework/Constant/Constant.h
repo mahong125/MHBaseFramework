@@ -15,7 +15,7 @@
 /**
  *  常量
  */
-extern NSString * const author;
+UIKIT_EXTERN NSString * const author;
 
 /**
  *  宏定义

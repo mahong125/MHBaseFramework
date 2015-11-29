@@ -57,7 +57,7 @@
 		CB46AD2B1C06FCCD0044185E /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		CB475EBE1C0B262700074D42 /* UIView+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Custom.h"; sourceTree = "<group>"; };
 		CB475EBF1C0B262700074D42 /* UIView+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Custom.m"; sourceTree = "<group>"; };
-		CB475EC51C0B356200074D42 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		CB475EC51C0B356200074D42 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		CB475EC61C0B3F9000074D42 /* UIButton+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Custom.h"; sourceTree = "<group>"; };
 		CB475EC71C0B3F9000074D42 /* UIButton+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Custom.m"; sourceTree = "<group>"; };
 		CB8B689F1C0AD289004476FB /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 			children = (
 				CB34EB8A1C06083C00BD4BB9 /* main.m */,
 				CBE65FEC1C0B06B200FD5DC6 /* PrefixHeader.pch */,
-				CB475EC51C0B356200074D42 /* Header.h */,
+				CB475EC51C0B356200074D42 /* Macro.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

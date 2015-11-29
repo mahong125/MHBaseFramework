@@ -15,6 +15,7 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "Macro.h"
 #endif
 
 
@@ -31,7 +32,5 @@ fprintf(stderr,  "-------------------------------日志分割线end-------------
 #define NSLog(format, ...) nil
 #endif
 
-
-#import "Header.h"
 
 #endif /* PrefixHeader_pch */

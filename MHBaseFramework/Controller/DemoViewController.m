@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "UIButton+Custom.h"
 #import <OpenUDID.h>
+#import <stdarg.h>
 
 @interface DemoViewController ()
 

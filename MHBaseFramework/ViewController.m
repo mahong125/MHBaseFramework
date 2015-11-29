@@ -11,7 +11,6 @@
 #import "NetworkManager.h"
 #import "Common.h"
 #import "Constant.h"
-#import "NSString+Custom.h"
 
 #ifdef DEBUG
 static NSString * const url = @"http://ac.ybjk.com/vod_v1.php?km=km3&m=sp";
@@ -76,7 +75,6 @@ static NSString * const url = @"http://ac.ybjk.com/ua.php";
     
     NSLog(@"--- dic %@",dic);
     
-    NSLog(@"-----json %@",[@"{}" jsonStringConvertToDictionary]);
 }
 
 - (void)sleep
