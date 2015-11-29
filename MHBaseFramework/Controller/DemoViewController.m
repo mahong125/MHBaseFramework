@@ -8,6 +8,8 @@
 
 #import "DemoViewController.h"
 #import "ViewController.h"
+#import "UIButton+Custom.h"
+#import <OpenUDID.h>
 
 @interface DemoViewController ()
 
@@ -22,7 +24,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"demo";
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msg) name:@"test" object:nil];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

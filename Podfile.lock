@@ -21,13 +21,16 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - MJExtension (3.0.3)
+  - OpenUDID (1.0.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
   - MJExtension (~> 3.0.3)
+  - OpenUDID (~> 1.0.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   MJExtension: de557e1c48ef3212590d3203764c8003fae68815
+  OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
 
 COCOAPODS: 0.39.0

@@ -17,6 +17,7 @@
 		CB34EBA41C06083C00BD4BB9 /* MHBaseFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB34EBA31C06083C00BD4BB9 /* MHBaseFrameworkTests.m */; };
 		CB46AD2C1C06FCCD0044185E /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46AD2B1C06FCCD0044185E /* DemoViewController.m */; };
 		CB475EC01C0B262700074D42 /* UIView+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = CB475EBF1C0B262700074D42 /* UIView+Custom.m */; };
+		CB475EC81C0B3F9000074D42 /* UIButton+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = CB475EC71C0B3F9000074D42 /* UIButton+Custom.m */; };
 		CB8B68A11C0AD289004476FB /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8B68A01C0AD289004476FB /* NetworkManager.m */; };
 		CBE65FDA1C0ADCDB00FD5DC6 /* NSString+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE65FD91C0ADCDB00FD5DC6 /* NSString+Custom.m */; };
 		CBE65FDD1C0AE4C000FD5DC6 /* NSDate+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE65FDC1C0AE4C000FD5DC6 /* NSDate+Custom.m */; };
@@ -57,6 +58,8 @@
 		CB475EBE1C0B262700074D42 /* UIView+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Custom.h"; sourceTree = "<group>"; };
 		CB475EBF1C0B262700074D42 /* UIView+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Custom.m"; sourceTree = "<group>"; };
 		CB475EC51C0B356200074D42 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		CB475EC61C0B3F9000074D42 /* UIButton+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Custom.h"; sourceTree = "<group>"; };
+		CB475EC71C0B3F9000074D42 /* UIButton+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Custom.m"; sourceTree = "<group>"; };
 		CB8B689F1C0AD289004476FB /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		CB8B68A01C0AD289004476FB /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		CBE65FD81C0ADCDB00FD5DC6 /* NSString+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Custom.h"; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 			children = (
 				CB475EBE1C0B262700074D42 /* UIView+Custom.h */,
 				CB475EBF1C0B262700074D42 /* UIView+Custom.m */,
+				CB475EC61C0B3F9000074D42 /* UIButton+Custom.h */,
+				CB475EC71C0B3F9000074D42 /* UIButton+Custom.m */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 				CB46AD2C1C06FCCD0044185E /* DemoViewController.m in Sources */,
 				CBE65FE01C0AEE3500FD5DC6 /* Common.m in Sources */,
 				CB8B68A11C0AD289004476FB /* NetworkManager.m in Sources */,
+				CB475EC81C0B3F9000074D42 /* UIButton+Custom.m in Sources */,
 				CBE65FDD1C0AE4C000FD5DC6 /* NSDate+Custom.m in Sources */,
 				CBE65FE41C0AF31800FD5DC6 /* Constant.m in Sources */,
 				CB34EB8B1C06083C00BD4BB9 /* main.m in Sources */,

@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>OpenUDID.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MHBaseFramework.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>98936B69DF0B6B8EF8D8E49E525C9720</key>
+		<key>822B09D3321B4A2F831111C7581E5CEF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B23B3D15FFC0FC9893968F478086D58D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B5DEC6148DB925A50BCA76AA83FAAAEF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

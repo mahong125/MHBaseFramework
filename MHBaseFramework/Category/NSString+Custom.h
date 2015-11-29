@@ -89,4 +89,32 @@
  */
 - (NSDictionary *)jsonStringConvertToDictionary;
 
+/**
+ *  获得设备的UUID
+ *
+ *  @return UUID
+ */
++ (NSString *)UUID;
+
+/**
+ *  判断是否为邮箱格式
+ *
+ *  @return bool
+ */
+- (BOOL)isEmail;
+
+/**
+ *  Base64 加密
+ *
+ *  @return 加密字符串
+ */
+- (NSString *)encodeToBase64;
+
+/**
+ *  Base64 解密
+ *
+ *  @return 解密字符串
+ */
+- (NSString *)decodeBase64;
+
 @end

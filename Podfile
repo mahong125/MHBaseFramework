@@ -6,6 +6,7 @@
 target 'MHBaseFramework' do
 pod 'AFNetworking', '~> 2.5.4'
 pod 'MJExtension', '~> 3.0.3'
+pod 'OpenUDID', '~> 1.0.0'
 end
 
 target 'MHBaseFrameworkTests' do
