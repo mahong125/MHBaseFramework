@@ -15,7 +15,14 @@
 		CB34EB961C06083C00BD4BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB34EB951C06083C00BD4BB9 /* Assets.xcassets */; };
 		CB34EB991C06083C00BD4BB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB34EB971C06083C00BD4BB9 /* LaunchScreen.storyboard */; };
 		CB34EBA41C06083C00BD4BB9 /* MHBaseFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB34EBA31C06083C00BD4BB9 /* MHBaseFrameworkTests.m */; };
-		CB34EBBF1C060AD600BD4BB9 /* UIColor+MHColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB34EBBE1C060AD600BD4BB9 /* UIColor+MHColor.m */; };
+		CB46AD2C1C06FCCD0044185E /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46AD2B1C06FCCD0044185E /* DemoViewController.m */; };
+		CB475EC01C0B262700074D42 /* UIView+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = CB475EBF1C0B262700074D42 /* UIView+Custom.m */; };
+		CB8B68A11C0AD289004476FB /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8B68A01C0AD289004476FB /* NetworkManager.m */; };
+		CBE65FDA1C0ADCDB00FD5DC6 /* NSString+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE65FD91C0ADCDB00FD5DC6 /* NSString+Custom.m */; };
+		CBE65FDD1C0AE4C000FD5DC6 /* NSDate+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE65FDC1C0AE4C000FD5DC6 /* NSDate+Custom.m */; };
+		CBE65FE01C0AEE3500FD5DC6 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE65FDF1C0AEE3500FD5DC6 /* Common.m */; };
+		CBE65FE41C0AF31800FD5DC6 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE65FE31C0AF31800FD5DC6 /* Constant.m */; };
+		CBE65FEF1C0B0B5800FD5DC6 /* NSDictionary+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE65FEE1C0B0B5800FD5DC6 /* NSDictionary+Custom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +52,24 @@
 		CB34EB9F1C06083C00BD4BB9 /* MHBaseFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHBaseFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB34EBA31C06083C00BD4BB9 /* MHBaseFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHBaseFrameworkTests.m; sourceTree = "<group>"; };
 		CB34EBA51C06083C00BD4BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB34EBBD1C060AD600BD4BB9 /* UIColor+MHColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MHColor.h"; sourceTree = "<group>"; };
-		CB34EBBE1C060AD600BD4BB9 /* UIColor+MHColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MHColor.m"; sourceTree = "<group>"; };
+		CB46AD2A1C06FCCD0044185E /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		CB46AD2B1C06FCCD0044185E /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		CB475EBE1C0B262700074D42 /* UIView+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Custom.h"; sourceTree = "<group>"; };
+		CB475EBF1C0B262700074D42 /* UIView+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Custom.m"; sourceTree = "<group>"; };
+		CB475EC51C0B356200074D42 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		CB8B689F1C0AD289004476FB /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		CB8B68A01C0AD289004476FB /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		CBE65FD81C0ADCDB00FD5DC6 /* NSString+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Custom.h"; sourceTree = "<group>"; };
+		CBE65FD91C0ADCDB00FD5DC6 /* NSString+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Custom.m"; sourceTree = "<group>"; };
+		CBE65FDB1C0AE4C000FD5DC6 /* NSDate+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Custom.h"; sourceTree = "<group>"; };
+		CBE65FDC1C0AE4C000FD5DC6 /* NSDate+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Custom.m"; sourceTree = "<group>"; };
+		CBE65FDE1C0AEE3500FD5DC6 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		CBE65FDF1C0AEE3500FD5DC6 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		CBE65FE21C0AF31800FD5DC6 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		CBE65FE31C0AF31800FD5DC6 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
+		CBE65FEC1C0B06B200FD5DC6 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CBE65FED1C0B0B5800FD5DC6 /* NSDictionary+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Custom.h"; sourceTree = "<group>"; };
+		CBE65FEE1C0B0B5800FD5DC6 /* NSDictionary+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Custom.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +131,8 @@
 		CB34EB881C06083C00BD4BB9 /* MHBaseFramework */ = {
 			isa = PBXGroup;
 			children = (
+				CBE65FE11C0AF30A00FD5DC6 /* Constant */,
+				CB46AD2D1C0755D70044185E /* Singleton */,
 				CB34EBB01C060A2600BD4BB9 /* AppDelegaete */,
 				CB34EBB11C060A2600BD4BB9 /* Category */,
 				CB34EBB21C060A2600BD4BB9 /* Controller */,
@@ -129,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				CB34EB8A1C06083C00BD4BB9 /* main.m */,
+				CBE65FEC1C0B06B200FD5DC6 /* PrefixHeader.pch */,
+				CB475EC51C0B356200074D42 /* Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -154,8 +181,8 @@
 		CB34EBB11C060A2600BD4BB9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				CB34EBB81C060A8600BD4BB9 /* UIColor */,
-				CB34EBB91C060A8600BD4BB9 /* UIFont */,
+				CB475EBD1C0B25FF00074D42 /* Foundation */,
+				CB475EBC1C0B25F300074D42 /* UIKit */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -165,6 +192,8 @@
 			children = (
 				CB34EB8F1C06083C00BD4BB9 /* ViewController.h */,
 				CB34EB901C06083C00BD4BB9 /* ViewController.m */,
+				CB46AD2A1C06FCCD0044185E /* DemoViewController.h */,
+				CB46AD2B1C06FCCD0044185E /* DemoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,6 +215,8 @@
 		CB34EBB51C060A2600BD4BB9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CBE65FDE1C0AEE3500FD5DC6 /* Common.h */,
+				CBE65FDF1C0AEE3500FD5DC6 /* Common.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -204,20 +235,52 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CB34EBB81C060A8600BD4BB9 /* UIColor */ = {
+		CB46AD2D1C0755D70044185E /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
-				CB34EBBD1C060AD600BD4BB9 /* UIColor+MHColor.h */,
-				CB34EBBE1C060AD600BD4BB9 /* UIColor+MHColor.m */,
+				CB8B689E1C0AD289004476FB /* NetworkManager */,
 			);
-			path = UIColor;
+			path = Singleton;
 			sourceTree = "<group>";
 		};
-		CB34EBB91C060A8600BD4BB9 /* UIFont */ = {
+		CB475EBC1C0B25F300074D42 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CB475EBE1C0B262700074D42 /* UIView+Custom.h */,
+				CB475EBF1C0B262700074D42 /* UIView+Custom.m */,
 			);
-			path = UIFont;
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		CB475EBD1C0B25FF00074D42 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				CBE65FD81C0ADCDB00FD5DC6 /* NSString+Custom.h */,
+				CBE65FD91C0ADCDB00FD5DC6 /* NSString+Custom.m */,
+				CBE65FDB1C0AE4C000FD5DC6 /* NSDate+Custom.h */,
+				CBE65FDC1C0AE4C000FD5DC6 /* NSDate+Custom.m */,
+				CBE65FED1C0B0B5800FD5DC6 /* NSDictionary+Custom.h */,
+				CBE65FEE1C0B0B5800FD5DC6 /* NSDictionary+Custom.m */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
+		};
+		CB8B689E1C0AD289004476FB /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				CB8B689F1C0AD289004476FB /* NetworkManager.h */,
+				CB8B68A01C0AD289004476FB /* NetworkManager.m */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		CBE65FE11C0AF30A00FD5DC6 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				CBE65FE21C0AF31800FD5DC6 /* Constant.h */,
+				CBE65FE31C0AF31800FD5DC6 /* Constant.m */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,9 +434,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB34EBBF1C060AD600BD4BB9 /* UIColor+MHColor.m in Sources */,
+				CBE65FDA1C0ADCDB00FD5DC6 /* NSString+Custom.m in Sources */,
 				CB34EB911C06083C00BD4BB9 /* ViewController.m in Sources */,
 				CB34EB8E1C06083C00BD4BB9 /* AppDelegate.m in Sources */,
+				CBE65FEF1C0B0B5800FD5DC6 /* NSDictionary+Custom.m in Sources */,
+				CB475EC01C0B262700074D42 /* UIView+Custom.m in Sources */,
+				CB46AD2C1C06FCCD0044185E /* DemoViewController.m in Sources */,
+				CBE65FE01C0AEE3500FD5DC6 /* Common.m in Sources */,
+				CB8B68A11C0AD289004476FB /* NetworkManager.m in Sources */,
+				CBE65FDD1C0AE4C000FD5DC6 /* NSDate+Custom.m in Sources */,
+				CBE65FE41C0AF31800FD5DC6 /* Constant.m in Sources */,
 				CB34EB8B1C06083C00BD4BB9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,8 +571,16 @@
 			baseConfigurationReference = 2AD9B5A47857884455A9555D /* Pods-MHBaseFramework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MHBaseFramework/PrefixHeader.pch";
 				INFOPLIST_FILE = MHBaseFramework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MHBaseFramework/MHKit",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.runbey.MHBaseFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -513,8 +591,15 @@
 			baseConfigurationReference = A07CC7224AA5274F779570B5 /* Pods-MHBaseFramework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MHBaseFramework/PrefixHeader.pch";
 				INFOPLIST_FILE = MHBaseFramework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MHBaseFramework/MHKit",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.runbey.MHBaseFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

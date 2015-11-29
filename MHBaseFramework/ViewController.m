@@ -8,9 +8,17 @@
 
 #import "ViewController.h"
 #import <AFNetworking.h>
+#import "NetworkManager.h"
+#import "Common.h"
+#import "Constant.h"
+#import "NSString+Custom.h"
 
-//static NSString * const url = @"http://ac.ybjk.com/vod_v1.php?km=km3&m=sp";
+#ifdef DEBUG
+static NSString * const url = @"http://ac.ybjk.com/vod_v1.php?km=km3&m=sp";
+
+#else
 static NSString * const url = @"http://ac.ybjk.com/ua.php";
+#endif
 
 @interface ViewController ()
 
@@ -23,8 +31,19 @@ static NSString * const url = @"http://ac.ybjk.com/ua.php";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.title = @"view";
     
-    [self testRequest];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 20, 30, 40)];
+    imageView.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:imageView];
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"URL  %@",url);
+    [self requestData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,37 +56,34 @@ static NSString * const url = @"http://ac.ybjk.com/ua.php";
 #pragma mark - Public
 
 #pragma mark - Private
-
-- (void)testRequest
+- (void)requestData
 {
-//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-     /** 一定要先序列化 然后进行操作 */
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-     /**  */
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/plain", @"text/html", nil];
-    
-    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    __block BOOL flag;
+    [[NetworkManager shareManager] setTimeOutInterval:20];
+    [[NetworkManager shareManager] requestHttpWithURL:url Parameter:nil Success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
         
-        NSLog(@"res %@",responseObject);
+         /** 请求的数据写文件 */
+        NSString *filePath = [Common createFileInDocumentsWithDirectory:@"mahong" fileName:@"mahong.plist"];
+        BOOL result = [responseObject writeToFile:filePath atomically:YES];
+        if (result) NSLog(@"写入文件成功 %@",filePath);
+        flag = YES;
         
-    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-        NSLog(@"结果 %@ ",operation.responseString);
-
+    } Failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
     }];
     
-//    [manager GET:url parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-//       
-//        NSLog(@"task %@",task);
-//        
-//        NSLog(@"responseObject %@",responseObject);
-//        
-//    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-//        
-//    }];
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:[Common createFileInDocumentsWithDirectory:@"mahong" fileName:@"mahong.plist"]];
+    
+    NSLog(@"--- dic %@",dic);
+    
+    NSLog(@"-----json %@",[@"{}" jsonStringConvertToDictionary]);
 }
+
+- (void)sleep
+{
+    NSLog(@"sleep");
+}
+
 
 #pragma mark - Protocol conformance
 
