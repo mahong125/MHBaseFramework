@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
+#import "ViewController.h"
 
-@interface DemoViewController : UIViewController
+@interface DemoViewController : BaseViewController
+
+@property (strong, nonatomic) ViewController *viewController;
+
 
 @end

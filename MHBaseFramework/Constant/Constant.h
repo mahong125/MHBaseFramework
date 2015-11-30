@@ -16,6 +16,7 @@
  *  常量
  */
 UIKIT_EXTERN NSString * const author;
+UIKIT_EXTERN NSString * const networkDidChangeNotificationName;
 
 /**
  *  宏定义
@@ -35,6 +36,13 @@ while(flag) \
 #define kPathDocument               [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 #define kPathCache                  [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 #define kPathSearch(filename)       [kPathDocument stringByAppendingPathComponent:filename]
-    
+
+#define Singleton(Class) static Class *_shareManager = nil; \
+dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+    _shareManager = [[Class alloc] init]; \
+}); \
+return _shareManager;
+
 #endif /*Constant.h*/
 

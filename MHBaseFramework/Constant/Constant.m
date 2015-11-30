@@ -9,3 +9,4 @@
 #import "Constant.h"
 
 NSString * const author = @"Lonely";
+NSString * const networkDidChangeNotificationName = @"networkDidChangeNotificationName";

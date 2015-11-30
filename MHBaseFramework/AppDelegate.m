@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "DemoViewController.h"
 #import "ViewController.h"
+#import "UserConfigManager.h"
+#import "AFNetworkReachabilityManager.h"
+#import "Constant.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +26,31 @@
     DemoViewController *view = [[DemoViewController alloc] init];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:view];
+    
+ 
+    AFNetworkReachabilityManager *reachablityManager = [AFNetworkReachabilityManager sharedManager];
+    
+    [reachablityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        // 当网络状态改变了, 就会调用这个block
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown: // 未知网络
+                NSLog(@"未知网络");
+                break;
+            case AFNetworkReachabilityStatusNotReachable: // 没有网络(断网)
+                NSLog(@"断网咯");
+                break;
+            case AFNetworkReachabilityStatusReachableViaWWAN: // 手机自带网络
+                NSLog(@"手机自带网络");
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi: // WIFI
+                NSLog(@"WIFI");
+                break;
+        }
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:networkDidChangeNotificationName object:@(status)];
+    }];
+    
+    [reachablityManager startMonitoring];
     
     self.window.rootViewController = nav;
     

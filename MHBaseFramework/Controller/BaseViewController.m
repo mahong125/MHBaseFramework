@@ -1,45 +1,30 @@
 //
-//  DemoViewController.m
+//  BaseViewController.m
 //  MHBaseFramework
 //
-//  Created by mahong on 15/11/26.
+//  Created by mahong on 15/11/30.
 //  Copyright © 2015年 mahong. All rights reserved.
 //
 
-#import "DemoViewController.h"
-#import "ViewController.h"
-#import "UIButton+Custom.h"
-#import <OpenUDID.h>
-#import <stdarg.h>
+#import "BaseViewController.h"
+#import "Constant.h"
 
-@interface DemoViewController ()
+@interface BaseViewController ()
 
 @end
 
-@implementation DemoViewController
+@implementation BaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"demo";
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkDidChange:) name:networkDidChangeNotificationName object:nil];
 }
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    ViewController *view = [[ViewController alloc] init];
-    self.viewController = view;
-    [self.navigationController pushViewController:self.viewController animated:YES];
-}
-
 
 - (void)networkDidChange:(NSNotification *)notification
 {
-    [super networkDidChange:notification];
-    
-    NSLog(@"%@ 网络状态 %@",NSStringFromClass([self class]),notification.object);
+     /** 走通知栏提醒用户*/
 }
 
 - (void)didReceiveMemoryWarning {

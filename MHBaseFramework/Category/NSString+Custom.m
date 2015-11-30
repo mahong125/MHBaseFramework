@@ -111,9 +111,28 @@ static const char base64EncodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghi
  */
 - (NSString *)stringByURLEncode
 {
-    NSString *encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]", NULL, kCFStringEncodingUTF8));
+    NSMutableString *output = [NSMutableString string];
+    const unsigned char *source = (const unsigned char *)[self UTF8String];
+    int sourceLen = (int)strlen((const char *)source);
+    for(int i = 0; i < sourceLen; ++i)
+    {
+        const unsigned char thisChar = source[i];
+        
+        if(thisChar == ' ')
+        {
+            [output appendString:@"+"];
+        }
+        else if(thisChar == '.' || thisChar == '-' || thisChar == '_' || thisChar == '~' || (thisChar >= 'a' && thisChar <= 'z') || (thisChar >= 'A' && thisChar <= 'Z') || (thisChar >= '0' && thisChar <= '9'))
+        {
+            [output appendFormat:@"%c", thisChar];
+        }
+        else
+        {
+            [output appendFormat:@"%%%02X", thisChar];
+        }
+    }
     
-    return encodedString;
+    return output;
 }
 
 - (CGSize)sizeForFont:(UIFont *)font size:(CGSize)size mode:(NSLineBreakMode)lineBreakMode {

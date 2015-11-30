@@ -42,7 +42,7 @@ static NSString * const url = @"http://ac.ybjk.com/ua.php";
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     NSLog(@"URL  %@",url);
-    [self requestData];
+//    [self requestData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,6 +76,15 @@ static NSString * const url = @"http://ac.ybjk.com/ua.php";
     NSLog(@"--- dic %@",dic);
     
 }
+
+- (void)networkDidChange:(NSNotification *)notification
+{
+    [super networkDidChange:notification];
+    
+    NSLog(@"%@ 网络状态 %@",NSStringFromClass([self class]),notification.object);
+}
+
+
 
 - (void)sleep
 {
