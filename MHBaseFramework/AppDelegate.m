@@ -12,6 +12,7 @@
 #import "UserConfigManager.h"
 #import "AFNetworkReachabilityManager.h"
 #import "Constant.h"
+#import "NSString+Custom.h"
 
 @interface AppDelegate ()
 
@@ -26,7 +27,6 @@
     DemoViewController *view = [[DemoViewController alloc] init];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:view];
-    
  
     AFNetworkReachabilityManager *reachablityManager = [AFNetworkReachabilityManager sharedManager];
     

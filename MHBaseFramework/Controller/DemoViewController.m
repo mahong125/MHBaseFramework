@@ -25,6 +25,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"demo";
     
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+    
+    self.view.backgroundColor = [UIColor redColor];
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

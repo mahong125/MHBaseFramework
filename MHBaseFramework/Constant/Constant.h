@@ -19,6 +19,14 @@ UIKIT_EXTERN NSString * const author;
 UIKIT_EXTERN NSString * const networkDidChangeNotificationName;
 
 /**
+ *  内联方法
+ */
+UIKIT_STATIC_INLINE void mh_alert(NSString *title, NSString *msg){
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+/**
  *  宏定义
  */
 

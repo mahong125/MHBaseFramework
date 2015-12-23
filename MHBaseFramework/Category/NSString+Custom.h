@@ -117,4 +117,25 @@
  */
 - (NSString *)decodeBase64;
 
+/**
+ *  汉字转拼音
+ *
+ *  @return 拼音
+ */
+- (NSString *)converToPinYin;
+
+/**
+ *  获取汉字首字母大写
+ *
+ *  @return
+ */
+- (NSString *)firstUppercasePinYin;
+
+/**
+ *  字符串中是否包含汉字
+ *
+ *  @return YES/NO
+ */
+- (BOOL)isContainChinese;
+
 @end

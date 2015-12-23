@@ -298,6 +298,51 @@ static const char base64EncodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghi
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
+/**
+ *  汉字转拼音
+ *
+ *  @return 拼音
+ */
+- (NSString *)converToPinYin
+{
+    NSMutableString *result = [[NSMutableString alloc] initWithString:self];
+    
+    CFStringTransform((CFMutableStringRef)result, NULL, kCFStringTransformMandarinLatin, NO);
+    
+    CFStringTransform((CFMutableStringRef)result, NULL, kCFStringTransformStripCombiningMarks, NO);
+    
+    return result;
+}
 
+/**
+ *  获取汉字首字母大写
+ *
+ *  @return
+ */
+- (NSString *)firstUppercasePinYin
+{
+    NSString *string = [self converToPinYin];
+    
+    return [[string uppercaseString] substringToIndex:1];
+}
+
+/**
+ *  字符串中是否包含汉字
+ *
+ *  @return YES/NO
+ */
+- (BOOL)isContainChinese
+{
+    for (int i =0; i < self.length; i++)
+    {
+        unichar ch = [self characterAtIndex:i];
+        if (0x4e00 < ch && ch < 0x9fff)
+        {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
 
 @end
